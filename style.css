@@ -6,23 +6,32 @@
   font-family: "Poppins", sans-serif;
   /* scroll-behavior: smooth; */
 }
+:root {
+  --fondo: #30889f;
+  --letra: #30889f;
+  --fondo2: #d5cece;
+  --letra2: #fff;
+}
+body{
+  position: relative;
+}
 .cabeza {
   display: flex;
   justify-content: space-around;
-  color: rgb(0, 0, 0);
   margin-bottom: 20px;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
-  background-color: #efefef;
+  background-color: var(--fondo);
+  color: var(--letra2);
 }
 .menu {
   display: none;
 }
-.cabeza h3 {
-  color: rgb(48, 136, 158);
-}
+/* .cabeza h3 {
+  color: var(--letra);
+} */
 img {
   max-width: 100%;
 }
@@ -34,7 +43,7 @@ img {
   display: flex;
 }
 .cabeza .cabeza-parte.active {
-  transform: translateY(40%);
+  transform: translateY(35%);
 }
 .cabeza-parte input {
   border: none;
@@ -47,10 +56,11 @@ img {
 .cabeza-parte button {
   border: none;
   padding: 8px 15px;
-  background-color: rgb(48, 136, 158);
-  font-weight: 100;
-  color: #fff;
+  background-color: var(--fondo);
+  font-weight: 300;
+  color: var(--letra2);
   cursor: pointer;
+  border: 1px solid var(--letra2);
 }
 .cabeza-parte .selector {
   display: flex;
@@ -58,11 +68,36 @@ img {
   align-items: center;
   margin: 0 8px;
 }
+
+.foto-persona {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  z-index: 50;
+  background-color: var(--fondo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--letra2);
+  padding: 0 20px;
+}
+/* .foto-persona i{
+  position: relative;
+  right: 0;
+} */
+.foto-persona img{
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  top: -20px;
+  border: 2px solid var(--letra2);
+}
 .selector select {
   border: none;
   outline: none;
   padding: 8px 15px;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   position: relative;
   width: 100%;
@@ -75,7 +110,7 @@ img {
   position: absolute;
   right: 0;
   padding-right: 5px;
-  color: rgb(48, 136, 158);
+  color: var(--letra);
   font-size: 20px;
 }
 
@@ -123,9 +158,9 @@ img {
   justify-content: space-around;
 }
 .tarjeta-abajo label {
-  background-color: rgb(48, 136, 158);
+  background-color: var(--fondo);
   border: none;
-  color: #fff;
+  color: var(--letra2);
   padding: 5px 20px;
   font-weight: 100;
   cursor: pointer;
@@ -139,7 +174,7 @@ img {
     display: flex;
     flex-direction: column;
     transition: 0.5s ease-in;
-    background-color: #efefef;
+    background-color: var(--fondo);
     position: absolute;
     width: 100%;
     top: 0;
@@ -151,13 +186,16 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #efefef;
+    background-color: var(--fondo);
     z-index: 20;
   }
   .menu {
     display: block;
-    color: #766c6c;
+    color: var(--letra2);
   }
+  /* .foto-persona img {
+    display: none;
+  } */
 
   .cabeza-parte {
     transition: 0.5s ease-in;
@@ -188,7 +226,7 @@ img {
   align-items: center;
 }
 .modal-cuerpo {
-  background-color: rgb(48, 136, 158);
+  background-color: var(--fondo);
   padding: 10px;
   width: 100%;
   max-width: 500px;
@@ -200,13 +238,13 @@ img {
 .modal-tarjeta {
   overflow: auto;
   padding-left: 10px;
-  color: #fff;
+  color: var(--letra2);
 }
 .modal-tarjeta h3 {
   text-align: center;
   font-weight: 400;
   margin-right: 10px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--letra2);
 }
 .modal-tarjeta p {
   padding: 10px 0;
@@ -223,7 +261,6 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  
 }
 
 .modal-abajo img {
@@ -238,7 +275,7 @@ img {
   margin: 5px 0;
   cursor: pointer;
 }
-.modal-abajo-foto:hover{
+.modal-abajo-foto:hover {
   background-color: rgb(17, 78, 94);
   z-index: 20;
 }
@@ -256,10 +293,11 @@ img {
     flex-direction: column;
     overflow: auto;
     width: 90%;
+    height: 420px;
   }
-  .modal-cuerpo img {
+  /* .modal-cuerpo img {
     padding: 0 auto;
-  }
+  } */
   .modal-tarjeta {
     overflow: inherit;
   }
