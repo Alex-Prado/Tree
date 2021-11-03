@@ -181,6 +181,12 @@ img {
   transition: 2s ease;
   display: flex;
 }
+.caja {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 .modal-cuerpo {
   background-color: rgb(48, 136, 158);
   padding: 10px;
@@ -207,11 +213,19 @@ img {
   font-weight: 100;
   font-size: 14px;
 }
+.modal .modal-datos {
+  padding: 10px 0;
+}
+.modal .modal-datos h5 {
+  padding-bottom: 8px;
+}
 .modal-abajo {
   display: flex;
   flex-direction: column;
   position: relative;
+  
 }
+
 .modal-abajo img {
   width: 33.33%;
   height: 33.33%;
@@ -221,7 +235,12 @@ img {
   align-items: center;
   justify-content: space-between;
   padding-right: 15px;
-  margin: 4px 0;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.modal-abajo-foto:hover{
+  background-color: rgb(17, 78, 94);
+  z-index: 20;
 }
 .cerrar-modal {
   width: 100%;
@@ -243,5 +262,9 @@ img {
   }
   .modal-tarjeta {
     overflow: inherit;
+  }
+  .caja {
+    width: 100%;
+    justify-content: center;
   }
 }
