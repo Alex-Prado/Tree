@@ -233,7 +233,7 @@ img {
 }
 @media (max-width: 450px) {
   .modal-cuerpo {
-    /* display: block; */
+    display: block;
     flex-direction: column;
     overflow: auto;
     width: 90%;
