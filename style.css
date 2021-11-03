@@ -10,17 +10,14 @@
   display: flex;
   justify-content: space-around;
   color: rgb(0, 0, 0);
-  /* padding: 20px; */
-  /* border-bottom: 1px solid rgb(48, 136, 158); */
   margin-bottom: 20px;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
-  /* height: 170px; */
-  /* background-color: rgb(255, 255, 255); */
+  background-color: #efefef;
 }
-.menu{
+.menu {
   display: none;
 }
 .cabeza h3 {
@@ -30,23 +27,21 @@ img {
   max-width: 100%;
 }
 .cabeza-arriba,
-.cabeza-parte{
-    padding: 20px 20px;
+.cabeza-parte {
+  padding: 20px 20px;
 }
-.cabeza-parte{
+.cabeza-parte {
   display: flex;
 }
 .cabeza .cabeza-parte.active {
-  transition: 0.5s ease-in;
-  transform: translateY(0);
-  background-color: #fff;
+  transform: translateY(40%);
 }
 .cabeza-parte input {
   border: none;
   outline: none;
   text-align: center;
   padding: 8px 0;
-  background-color: #efefef;
+
   font-weight: 100;
 }
 .cabeza-parte button {
@@ -56,9 +51,8 @@ img {
   font-weight: 100;
   color: #fff;
   cursor: pointer;
-
 }
-.cabeza-parte .selector{
+.cabeza-parte .selector {
   display: flex;
   position: relative;
   align-items: center;
@@ -68,16 +62,16 @@ img {
   border: none;
   outline: none;
   padding: 8px 15px;
-  
-  background-color: #efefef;
+  font-weight: 300;
   text-transform: uppercase;
   position: relative;
   width: 100%;
   height: 100%;
   appearance: none;
+  color: #423c3c;
 }
 
-.selector i{
+.selector i {
   position: absolute;
   right: 0;
   padding-right: 5px;
@@ -86,7 +80,6 @@ img {
 }
 
 .cuerpo {
-
   margin-top: 80px;
   padding: 15px;
   min-width: 80%;
@@ -117,18 +110,19 @@ img {
   width: 80%;
   padding: 15px;
 }
-.tarjeta-parte h3{
+.tarjeta-parte h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   text-align: center;
+  font-weight: 600;
 }
 .tarjeta-abajo {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.tarjeta-abajo button {
+.tarjeta-abajo label {
   background-color: rgb(48, 136, 158);
   border: none;
   color: #fff;
@@ -136,6 +130,7 @@ img {
   font-weight: 100;
   cursor: pointer;
 }
+
 @media (max-width: 635px) {
   .cabeza {
     flex-direction: column;
@@ -143,26 +138,110 @@ img {
   .cabeza-parte {
     display: flex;
     flex-direction: column;
+    transition: 0.5s ease-in;
+    background-color: #efefef;
+    position: absolute;
+    width: 100%;
+    top: 0;
   }
   .cabeza .selector {
-    margin: 5px 0;
+    margin: 10px 0;
   }
   .cabeza-arriba {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #efefef;
     z-index: 20;
   }
   .menu {
     display: block;
     color: #766c6c;
   }
-  /* .selector i{
-    color: red;
-  } */
+
   .cabeza-parte {
     transition: 0.5s ease-in;
     transform: translateY(-150%);
+  }
+}
+
+.modal {
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: 2s ease;
+}
+.modal.active {
+  transition: 2s ease;
+  display: flex;
+}
+.modal-cuerpo {
+  background-color: rgb(48, 136, 158);
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.modal-tarjeta {
+  overflow: auto;
+  padding-left: 10px;
+  color: #fff;
+}
+.modal-tarjeta h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-right: 10px;
+  border-bottom: 1px solid #fff;
+}
+.modal-tarjeta p {
+  padding: 10px 0;
+  font-weight: 100;
+  font-size: 14px;
+}
+.modal-abajo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.modal-abajo img {
+  width: 33.33%;
+  height: 33.33%;
+}
+.modal-abajo-foto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+  margin: 4px 0;
+}
+.cerrar-modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 450px) {
+  .modal-cuerpo {
+    /* display: block; */
+    flex-direction: column;
+    overflow: auto;
+    width: 90%;
+  }
+  .modal-cuerpo img {
+    padding: 0 auto;
+  }
+  .modal-tarjeta {
+    overflow: inherit;
   }
 }
