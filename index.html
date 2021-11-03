@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cabeza">
+      <div class="cabeza-arriba">
+        <h3>FAMILIA PRADO</h3>
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+      </div>
+
+      <div class="cabeza-parte">
+        <input type="text" placeholder="ingreso el nombre" />
+        <div class="selector">
+
+          <select name="" id="">
+            <option value="">Padre</option>
+            <option value="">Madre</option>
+            <option value="">Hijo(a)</option>
+            <option value="">sobrino(a)</option>
+            <option value="">tio(a)</option>
+            <option value="">Primo(a)</option>
+          </select>
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+        <button>GUARDAR</button>
+      </div>
+    </div>
+
+    <div class="cuerpo">
+      <div class="tarjeta">
+        <img src="100.jpg" alt="" />
+        <div class="tarjeta-parte">
+          <h3>Victor Aparicio Prado Torres de la Puerta</h3>
+          <div class="tarjeta-abajo">
+            <p>Padre</p>
+            <button>Ver</button>
+          </div>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="100.jpg" alt="" />
+        <div class="tarjeta-parte">
+          <h3>Victor Prado</h3>
+          <div class="tarjeta-abajo">
+            <p>Padre</p>
+            <button>Ver</button>
+          </div>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="100.jpg" alt="" />
+        <div class="tarjeta-parte">
+          <h3>Victor Prado</h3>
+          <div class="tarjeta-abajo">
+            <p>Padre</p>
+            <button>Ver</button>
+          </div>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="100.jpg" alt="" />
+        <div class="tarjeta-parte">
+          <h3>Victor Prado</h3>
+          <div class="tarjeta-abajo">
+            <p>Padre</p>
+            <button>Ver</button>
+          </div>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="100.jpg" alt="" />
+        <div class="tarjeta-parte">
+          <h3>Victor Prado</h3>
+          <div class="tarjeta-abajo">
+            <p>Padre</p>
+            <button>Ver</button>
+          </div>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="100.jpg" alt="" />
+        <div class="tarjeta-parte">
+          <h3>Victor Prado</h3>
+          <div class="tarjeta-abajo">
+            <p>Padre</p>
+            <button>Ver</button>
+          </div>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="100.jpg" alt="" />
+        <div class="tarjeta-parte">
+          <h3>Victor Prado</h3>
+          <div class="tarjeta-abajo">
+            <p>Padre</p>
+            <button>Ver</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menu = document.querySelector(".menu");
+      menu.addEventListener("click", () => {
+        const cabezaParte = document.querySelector(".cabeza-parte");
+        cabezaParte.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

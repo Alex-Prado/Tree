@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* scroll-behavior: smooth; */
+}
+.cabeza {
+  display: flex;
+  justify-content: space-around;
+  color: rgb(0, 0, 0);
+  /* padding: 20px; */
+  /* border-bottom: 1px solid rgb(48, 136, 158); */
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  /* height: 170px; */
+  /* background-color: rgb(255, 255, 255); */
+}
+.menu{
+  display: none;
+}
+.cabeza h3 {
+  color: rgb(48, 136, 158);
+}
+img {
+  max-width: 100%;
+}
+.cabeza-arriba,
+.cabeza-parte{
+    padding: 20px 20px;
+}
+.cabeza-parte{
+  display: flex;
+}
+.cabeza .cabeza-parte.active {
+  transition: 0.5s ease-in;
+  transform: translateY(0);
+  background-color: #fff;
+}
+.cabeza-parte input {
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 8px 0;
+  background-color: #efefef;
+  font-weight: 100;
+}
+.cabeza-parte button {
+  border: none;
+  padding: 8px 15px;
+  background-color: rgb(48, 136, 158);
+  font-weight: 100;
+  color: #fff;
+  cursor: pointer;
+
+}
+.cabeza-parte .selector{
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 8px;
+}
+.selector select {
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  
+  background-color: #efefef;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+}
+
+.selector i{
+  position: absolute;
+  right: 0;
+  padding-right: 5px;
+  color: rgb(48, 136, 158);
+  font-size: 20px;
+}
+
+.cuerpo {
+
+  margin-top: 80px;
+  padding: 15px;
+  min-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: auto;
+}
+.tarjeta {
+  border: 1px solid rgba(48, 136, 158, 0.363);
+  position: relative;
+  display: flex;
+  justify-content: start;
+  height: 90px;
+  color: #766c6c;
+}
+.tarjeta img {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  padding: 5px;
+}
+.tarjeta-parte {
+  position: absolute;
+  right: 0%;
+  width: 80%;
+  padding: 15px;
+}
+.tarjeta-parte h3{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+}
+.tarjeta-abajo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tarjeta-abajo button {
+  background-color: rgb(48, 136, 158);
+  border: none;
+  color: #fff;
+  padding: 5px 20px;
+  font-weight: 100;
+  cursor: pointer;
+}
+@media (max-width: 635px) {
+  .cabeza {
+    flex-direction: column;
+  }
+  .cabeza-parte {
+    display: flex;
+    flex-direction: column;
+  }
+  .cabeza .selector {
+    margin: 5px 0;
+  }
+  .cabeza-arriba {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 20;
+  }
+  .menu {
+    display: block;
+    color: #766c6c;
+  }
+  /* .selector i{
+    color: red;
+  } */
+  .cabeza-parte {
+    transition: 0.5s ease-in;
+    transform: translateY(-150%);
+  }
+}
