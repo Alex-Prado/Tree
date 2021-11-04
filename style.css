@@ -12,7 +12,7 @@
   --fondo2: #d5cece;
   --letra2: #fff;
 }
-body{
+body {
   position: relative;
 }
 .cabeza {
@@ -86,12 +86,21 @@ img {
   position: relative;
   right: 0;
 } */
-.foto-persona img{
+.foto-persona img {
   height: 80px;
   border-radius: 50%;
-  position: relative;
-  top: -20px;
   border: 2px solid var(--letra2);
+}
+.foto-persona .datos-persona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -25px;
+}
+.datos-persona h5 {
+  font-weight: 100;
 }
 .selector select {
   border: none;
@@ -115,7 +124,8 @@ img {
 }
 
 .cuerpo {
-  margin-top: 80px;
+  margin: 70px 0 70px 0;
+  /* margin-top: 70px; */
   padding: 15px;
   min-width: 80%;
   display: grid;
