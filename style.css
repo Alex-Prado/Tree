@@ -71,17 +71,18 @@ img {
 }
 
 .foto-persona {
-  width: 100%;
+  width: 50%;
   height: 50px;
   position: fixed;
   bottom: 0;
+  right: 0;
   z-index: 50;
   background-color: var(--fondo);
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--letra2);
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 /* .foto-persona i{
   position: relative;
@@ -93,11 +94,6 @@ img {
   border: 2px solid var(--letra2);
 }
 .foto-persona .datos-persona {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   top: -30px;
 }
 .foto-persona .datos{
@@ -106,6 +102,8 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 .datos-persona h5,
 .datos h5{
@@ -189,9 +187,7 @@ img {
 @media (max-width: 635px) {
   .cabeza {
     flex-direction: column;
-    /* background: var(--fondo2);background: var(--letra2); */
-    background: #fff;
-    
+    background: #fff; 
   }
   .cabeza-parte {
     display: flex;
@@ -211,20 +207,18 @@ img {
     justify-content: space-between;
     background-color: var(--fondo);
     z-index: 20;
-    /* border-radius: 0 0 30px 30px;
-    background: red; */
   }
   .menu {
     display: block;
     color: var(--letra2);
   }
-  /* .foto-persona img {
-    display: none;
-  } */
 
   .cabeza-parte {
     transition: 0.5s ease-in;
     transform: translateY(-150%);
+  }
+  .foto-persona{
+    width: 100%;
   }
 }
 
