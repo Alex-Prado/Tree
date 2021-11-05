@@ -7,7 +7,8 @@
   /* scroll-behavior: smooth; */
 }
 :root {
-  --fondo: #30889f;
+  /* --fondo: #30889f; */
+  --fondo: #484c4d;
   --letra: #30889f;
   --fondo2: #d5cece;
   --letra2: #fff;
@@ -97,9 +98,17 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: -25px;
+  top: -30px;
 }
-.datos-persona h5 {
+.foto-persona .datos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.datos-persona h5,
+.datos h5{
   font-weight: 100;
 }
 .selector select {
@@ -169,9 +178,10 @@ img {
 }
 .tarjeta-abajo label {
   background-color: var(--fondo);
+  border-radius: 5px;
   border: none;
   color: var(--letra2);
-  padding: 5px 20px;
+  padding: 5px 25px;
   font-weight: 100;
   cursor: pointer;
 }
@@ -179,6 +189,9 @@ img {
 @media (max-width: 635px) {
   .cabeza {
     flex-direction: column;
+    /* background: var(--fondo2);background: var(--letra2); */
+    background: #fff;
+    
   }
   .cabeza-parte {
     display: flex;
@@ -198,6 +211,8 @@ img {
     justify-content: space-between;
     background-color: var(--fondo);
     z-index: 20;
+    /* border-radius: 0 0 30px 30px;
+    background: red; */
   }
   .menu {
     display: block;
@@ -236,7 +251,11 @@ img {
   align-items: center;
 }
 .modal-cuerpo {
-  background-color: var(--fondo);
+  /* background-color: var(--fondo); */
+  background: #fff;
+  color: #464141;
+  border-radius: 5px;
+  /* background-color: var(--fondo2); */
   padding: 10px;
   width: 100%;
   max-width: 500px;
@@ -249,17 +268,17 @@ img {
 .modal-tarjeta {
   overflow: auto;
   padding-left: 10px;
-  color: var(--letra2);
+  /* color: var(--letra2); */
 }
 .modal-tarjeta h3 {
   text-align: center;
-  font-weight: 400;
+  /* font-weight: 400; */
   margin-right: 10px;
-  border-bottom: 1px solid var(--letra2);
+  border-bottom: 1px solid var(--fondo);
 }
 .modal-tarjeta p {
   padding: 10px 0;
-  font-weight: 100;
+  /* font-weight: 100; */
   font-size: 14px;
 }
 .modal .modal-datos {
@@ -287,8 +306,9 @@ img {
   cursor: pointer;
 }
 .modal-abajo-foto:hover {
-  background-color: rgb(17, 78, 94);
+  background-color: rgb(156, 171, 175);
   z-index: 20;
+  color: #fff;
 }
 .cerrar-modal {
   width: 100%;
